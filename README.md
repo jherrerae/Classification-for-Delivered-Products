@@ -25,28 +25,29 @@ Second part of the analysis is creating the prediction models.
     * Standard scaler
   * For categorical features
     * Hot Enconder
-* Additionals Models were created using PCA
 
-* Two Prediction Models
-  * Linear Regression
-  * Decision Tree
- 
- ![Pipelines_Linear_Regression](Pipelines_Linear_Regression.jpg)
- 
- ![Pipelines_Regression_Tree.jpg](Pipelines_Regression_Tree.jpg)
+
+* 3 Prediction Models
+  * Logistic Regression
+  * KNN
+  * XGBoost
+* Same models were tested with PCA
  
  
 ## Results
 Exploratory Analysis
 
-**Average Sale per Outlet Type**
- ![Average_Sale.png](Average_Sale.png)
+**Classes Balance**
+
+1 are products that DID arrive late
+
+ ![Classes_Balance.jpg](Classes_Balance.jpg)
  
- **Sales per Category and Outlet Type**
+ **Categorical Features vs Target**
  
-  ![Stacked_Bar1.jpg](Stacked_Bar1.jpg)
+  ![Categorical_Variables.jpg](Categorical_Variables.jpg)
  
-  Stacked barplot showing sales contribution of each category per Outle Type, Snacks Foods and Fruits and Vegetables are the cateogries with the biggest percentages.
+  Barplots above shows that for the categorical variables there is no visible relation between those features and the target, given that in all graphs relation between products on time and late stays the same
  
   **Features Analysis**
    ![Features_Analysis.jpg](Features_Analysis.jpg)
