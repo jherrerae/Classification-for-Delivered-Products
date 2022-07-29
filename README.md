@@ -82,12 +82,9 @@ Using recall means that the models is avoiding False negatives.
 ## Recommendations
 
 * Try to use other machine learning models such as Random Forest or maybe other boosting models
-* Perform a cost analysis of On Time vs Late products to determine right treshold of the model or change the metric used to select the model.
-
-Analyze predictions to determine how maximize sales based in the current features.  
-
-Deeper analysis of features that may not be correlated to the model can be done to simplify the model.
+* Perform a cost analysis of On Time vs Late products to determine the right treshold of the model 
+* Depending of the cost analysis mentioned in the above also the metric used to select the model may vary
 
 
 ## Limitations & Next Steps
-Due to the scope of the project only 2 models were tested. Using other models the predictions may be better
+Due to the scope of the project and computer capacity only 3 models were tested. Using other models the predictions may be better. 
