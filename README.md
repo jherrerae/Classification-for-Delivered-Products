@@ -49,29 +49,40 @@ Exploratory Analysis
  
   Barplots above shows that for the categorical variables there is no visible relation between those features and the target, given that in all graphs relation between products on time and late stays the same
  
-  **Features Analysis**
-   ![Features_Analysis.jpg](Features_Analysis.jpg)
-   
-   Analysis of certain variables that may not be correlated to Sales and can be left out of the features dataframe when doing the regression models.  
-   Item Weight certainly doesn't seem to be correlated sales. Item_Visibility and Item_Fat_Content will be evaluated in the regression model.
+  **Relation between Weight, Cost and Discount**
+|Discount vs Cost (1) | Discount vs Weight (2) | Cost vs Weight (3) |
+| ------------- |:-------------:|:-------------:|
+|  ![Discount_vs_Cost.jpg](Discount_vs_Cost.jpg)     | ![Discount_vs_Weight.jpg](Discount_vs_Weight.jpg)   | ![Cost_vs_Weight.jpg](Cost_vs_Weight.jpg)     |
+  
+Graph 1 above shows some interesting patterns. All the products delivered on time have discount of 10$ or less and have a weight between 1kg and 2kg or between 4kg and 6kg.
+
+Graph 2 shows that all the products that arrive on time had a discount lower than 10$ and the cost of the product didn't matter to be delivered on time or not.
+
+Analyzing Graph 3, it can be notice that:
+All the products that arrive on time are between 1kg and 2kg and between 4kg and 6kg.
+All the products between 2kg and 4kg did not arrive on time.
+The highest avg cost of products is for the ones that weight between 2kg and 4kg
+
+
+
   
 ## Model
-The model selected is a Decision Tree with a 5 level depth.
+The model selected is a Logistic Regression. The metric used to select the model was Recall.
+Using recall means that the models is avoiding False negatives.
+
+|Recall | 0.8509 | 
+| ------------- |:-------------:|
+| Accuracy    |0.6240
+
+![Logistic_Regression.jpg](Logistic_Regression.jpg)
 
 
-|Metrics | Test Data | Train Data |
-| ------------- |:-------------:|:-------------:|
-| MAE      | 738.34     | 762.58     |
-| MSE      | 1118083.68     | 1172164.97     |
-| RMSE      | 1057.39    | 1082.67     |
-| R^2      | 0.59     | 0.6     |
-
-The model is explaining around 60% of the variance in the target, RMSE is $1057 which considering the averages sales can give us a fair estimate of how sales may behave in the future.
 
 
 ## Recommendations
-For this analysis only a linear regression and a decision tree were considered.  
-Use other models(Random Forest, K-Neighbors) to verify if a better R^2 can be obtain.  
+
+* Try to use other machine learning models such as Random Forest or maybe other boosting models
+* Perform a cost analysis of On Time vs Late products to determine right treshold of the model or change the metric used to select the model.
 
 Analyze predictions to determine how maximize sales based in the current features.  
 
