@@ -1,4 +1,4 @@
-# Classification for Products will arrive late for Ecommerce Company
+# Classification for Products that will arrive late for Ecommerce Company
 
 ## Data analysis including exploratory analysis, data viz and predictions using Classification Models
 
